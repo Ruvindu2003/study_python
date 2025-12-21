@@ -45,3 +45,5 @@ customer=[1,"hii",4,5,6]
 customer[0]="Buddima"
 customer.append("New Value")
 print(customer)
+
+
