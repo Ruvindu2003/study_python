@@ -70,3 +70,6 @@ person["is_student"]=False
 print(person)
 person["address"]="New Address"
 print(person)
+
+del person["address"]
+print(person)
