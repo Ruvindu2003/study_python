@@ -47,3 +47,26 @@ customer.append("New Value")
 print(customer)
 
 
+MyList=["Ruvindu",25,True,5.9]
+
+
+person={
+    "name":"Ruvindu",
+    "age":25,
+    "is_student":True
+}
+
+print(person["name"])
+print(person["age"])
+print(person["is_student"])
+
+print(len(person))
+
+person.get("name")
+person["age"]=26
+person["is_student"]=False
+
+
+print(person)
+person["address"]="New Address"
+print(person)
