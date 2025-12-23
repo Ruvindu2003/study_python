@@ -73,3 +73,21 @@ print(person)
 
 del person["address"]
 print(person)
+
+
+emptyset=set()
+
+numbers=(1,2,3,4,5)
+
+print(numbers[0])
+print(numbers)
+
+frutes=set(["apple","banana","cherry","orange"])
+
+print(frutes)
+
+score=[90,85,88,92,95]
+
+unique_scores=set(score)
+print(unique_scores)
+
