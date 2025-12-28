@@ -32,3 +32,10 @@ sumcalculation = add_numbers(10, 30)  # moved out of function and fixed spelling
 print(sumcalculation)
 
 
+def multiply_numbers(x, y):  # renamed from 'multiply' to avoid shadowing built-in
+    return x * y
+
+
+result = multiply_numbers(5, 4)  # moved out of function
+print(result)
+
