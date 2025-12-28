@@ -1,6 +1,7 @@
 import math 
 import random 
 import json
+import datetime
 
 print(math.sqrt(16))
 
@@ -16,3 +17,5 @@ print(numberss)
 name_dict={"name":"Buddima","age":22,"city":"Colombo"}
 name_json=json.dumps(name_dict)
 print(name_json)
+
+print(datetime.datetime.now())
