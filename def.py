@@ -14,15 +14,21 @@ def greet(name, last_name):
 
 print(greet(name="Buddima", last_name="dharani"))
 
-discount=20
+DISCOUNT = 20  # renamed from 'discount' to avoid shadowing
 
 def calculate_price(price):
     tax_rate = 0.2  # 20% tax
-    discount = 10
-    final_price = price * (1 + tax_rate) - discount
+    final_price = price * (1 + tax_rate) - DISCOUNT
     return final_price
 
 print("final price is:", calculate_price(100))
-print("global discount is:", discount)
+print("global discount is:", DISCOUNT)
+
+
+def add_numbers(a, b):  # renamed from 'sum' to avoid shadowing built-in
+    return a + b
+
+sumcalculation = add_numbers(10, 30)  # moved out of function and fixed spelling
+print(sumcalculation)
 
 
