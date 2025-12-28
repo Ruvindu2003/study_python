@@ -52,3 +52,11 @@ print(total)
 if double(7)>10:
     print("Large number")
 
+def sample_function():
+        numbers22=[1, 2, 3, 4, 5]
+        firstNummber=numbers22[0]
+        lastNummber=numbers22[-1]
+        print("First number:", firstNummber)
+        print("Last number:", lastNummber)
+
+sample_function()  # moved out of function
