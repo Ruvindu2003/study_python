@@ -39,3 +39,16 @@ def multiply_numbers(x, y):  # renamed from 'multiply' to avoid shadowing built-
 result = multiply_numbers(5, 4)  # moved out of function
 print(result)
 
+
+def double(number):
+    return number * 2
+
+    result = double(10)  # moved out of function
+print(result)
+
+total = double(15) +double(20)
+print(total)
+
+if double(7)>10:
+    print("Large number")
+
