@@ -1,30 +1,28 @@
-
-
-def isWether(temperage):
-
-    if temperage>30:
+def is_weather(temperature):
+    # fixed naming and parameter name
+    if temperature > 30:
         return "It's a hot day"
     else:
         return "It's not a hot day"
 
-print(isWether(35)) #isWether(59) 
+print(is_weather(35))  # is_weather(59)
 
 
-def greate(name,last_name):
+def greet(name, last_name):
     return f"Hello, {name} {last_name}!"
 
 
-print(greate(name="Buddima",last_name="dharani"))
+print(greet(name="Buddima", last_name="dharani"))
 
 
 
 def calculate_price(price):
-    tax=0.2
-    discount=10
-    final_price=price+tax-discount
-    print("final price is:",final_price)
+    tax_rate = 0.2  # 20% tax
+    discount = 10
+    final_price = price * (1 + tax_rate) - discount
+    return final_price
 
-print(calculate_price(100))
+print("final price is:", calculate_price(100))
 
 
 
