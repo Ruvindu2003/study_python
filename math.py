@@ -18,4 +18,4 @@ name_dict={"name":"Buddima","age":22,"city":"Colombo"}
 name_json=json.dumps(name_dict)
 print(name_json)
 
-print(datetime.datetime.now())
+print(datetime.datetime.today())
