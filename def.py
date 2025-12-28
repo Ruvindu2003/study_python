@@ -14,7 +14,7 @@ def greet(name, last_name):
 
 print(greet(name="Buddima", last_name="dharani"))
 
-
+discount=20
 
 def calculate_price(price):
     tax_rate = 0.2  # 20% tax
@@ -23,6 +23,6 @@ def calculate_price(price):
     return final_price
 
 print("final price is:", calculate_price(100))
-
+print("global discount is:", discount)
 
 
