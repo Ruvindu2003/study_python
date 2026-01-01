@@ -12,6 +12,8 @@ person = {
     "age": 22,
 }
 
+print(person)
+
 print(person["name"])
 person["age"] = 23
 print(person)
