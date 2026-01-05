@@ -31,3 +31,6 @@ print(df.dtypes)
 # Optional: print per-hour summary
 for temp, date in zip(df["temperature_C"].tolist(), df["date"].dt.strftime("%Y-%m-%d %H:%M").tolist()):
     print(f"On {date}, the temperature was {temp}°C")
+
+    df["date "]=pd.to_datetime(df["date"])
+    print(df)
