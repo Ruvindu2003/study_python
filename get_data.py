@@ -1,6 +1,7 @@
 import requests
 from datetime import datetime, timedelta
 import pandas as pd
+import matplotlib.pyplot as plt
 
 
 
@@ -34,3 +35,12 @@ for temp, date in zip(df["temperature_C"].tolist(), df["date"].dt.strftime("%Y-%
 
     df["date "]=pd.to_datetime(df["date"])
     print(df)
+
+# Plot the temperature data
+plt.figure(figsize=(10, 5))
+plt.plot(df["date"], df["temperature_C"])
+plt.xlabel("Date")
+plt.ylabel("Temperature (°C)")  
+plt.show()      
+df["date "]=pd.to_datetime(df["date"])
+print(df)
