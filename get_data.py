@@ -45,9 +45,13 @@ plt.show()
 df["date "]=pd.to_datetime(df["date"])
 print(df)
 
+
+
 plt.figure(figsize=(10, 5))
 plt.ylabel("Temperature (°C)")
 plt.title("Temperature over the past week in Paris")
+plt.plot(df["date"], df["temperature_C"], label="Temperature (°C)")
+plt.xlabel("Date")
 plt.legend
 
 plt.xticks(rotation=45)
