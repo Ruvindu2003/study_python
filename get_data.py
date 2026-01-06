@@ -44,3 +44,14 @@ plt.ylabel("Temperature (°C)")
 plt.show()      
 df["date "]=pd.to_datetime(df["date"])
 print(df)
+
+plt.figure(figsize=(10, 5))
+plt.ylabel("Temperature (°C)")
+plt.title("Temperature over the past week in Paris")
+plt.legend
+
+plt.xticks(rotation=45)
+plt.tight_layout()
+
+plt.savefig("weather_chart.png")
+plt.show()
