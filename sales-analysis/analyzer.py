@@ -1,10 +1,16 @@
 import pandas as pd
 import json
-import os
-from helpers import calculate_price, format_currency
+from pathlib import Path
+
+# Resolve paths relative to this script's folder so it runs from anywhere
+script_dir = Path(__file__).resolve().parent
+data_path = script_dir / 'data' / 'sales.csv'
+output_dir = script_dir / 'output'
+output_dir.mkdir(parents=True, exist_ok=True)
 
 # Read the CSV file
-df = pd.read_csv('data/sales.csv')
+print(f"Reading: {data_path}")
+df = pd.read_csv(data_path)
 print("CSV Data:")
 print(df)
 print(f"\nShape: {df.shape[0]} rows, {df.shape[1]} columns")
@@ -14,21 +20,25 @@ df['total'] = df['quantity'] * df['price']
 print("\nWith totals:")
 print(df)
 
-# Create output directory
-os.makedirs('output', exist_ok=True)
-
 # Save as different formats
 # 1. JSON format (good for web APIs)
-with open('output/sales_data.json', 'w', encoding='utf-8') as f:
-	json.dump(df.to_dict(orient='records'), f, indent=2, ensure_ascii=False)
+(output_dir / 'sales_data.json').write_text(
+	df.to_json(orient='records', indent=2)
+)
 
 # 2. Excel format (good for sharing)
-df.to_excel('output/sales_data.xlsx', index=False)
+try:
+	df.to_excel(output_dir / 'sales_data.xlsx', index=False)
+	excel_saved = True
+except ImportError:
+	excel_saved = False
+	print("Note: openpyxl not installed; skipping Excel export.")
 
 # 3. Updated CSV (with our new total column)
-df.to_csv('output/sales_with_totals.csv', index=False)
+df.to_csv(output_dir / 'sales_with_totals.csv', index=False)
 
 print("\nFiles saved:")
-print("- output/sales_data.json")
-print("- output/sales_data.xlsx") 
-print("- output/sales_with_totals.csv")
+print(f"- {output_dir / 'sales_data.json'}")
+if excel_saved:
+	print(f"- {output_dir / 'sales_data.xlsx'}")
+print(f"- {output_dir / 'sales_with_totals.csv'}")
