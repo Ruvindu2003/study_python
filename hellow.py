@@ -120,11 +120,14 @@
 
 x=2
 if x<5:
-    print("x is less than 5")
+    print("x is less than 5") 
+else:
+    print("x is greater than or equal to 5")
 
 
-    "Hello, World!" + 40
-    #ruun time error  Type Erro  
+    # Safe concatenation: convert int to str before adding
+    print("Hello, World!" + str(40))
+    # previously caused runtime TypeError by adding int to str
 
 
 name = "Ruvindu"
@@ -135,12 +138,12 @@ print(name+ str(age))
 
 
 try:
-    print("Hello, World!" + 40)
+    print("Hello, World!" + str(40))
 except TypeError:
     print("Type Error: Cannot concatenate string and integer.")
 
 
-    
+
 
 
 
