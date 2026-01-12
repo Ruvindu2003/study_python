@@ -118,5 +118,6 @@
 # sententce = "The quick brown fox jumps over the lazy dog"
 # print(sententce.title())
 
-
-
+x=2
+if x<5:
+    print("x is less than 5")
