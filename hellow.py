@@ -124,6 +124,23 @@ if x<5:
 
 
     "Hello, World!" + 40
-    #ruun time error   
+    #ruun time error  Type Erro  
+
+
+name = "Ruvindu"
+age = 25
+
+print(name+ str(age))
+#not run time erro
+
+
+try:
+    print("Hello, World!" + 40)
+except TypeError:
+    print("Type Error: Cannot concatenate string and integer.")
+
+
+    
+
 
 
