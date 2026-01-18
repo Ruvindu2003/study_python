@@ -143,6 +143,13 @@ except TypeError:
     print("Type Error: Cannot concatenate string and integer.")
 
 
+    try:
+        print(name+str(40))
+
+     except TypeError:
+      print("Type Erro tht is "+str(40))
+
+
 
 
 
