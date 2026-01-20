@@ -66,6 +66,11 @@
 # person["age"]=26
 # person["is_student"]=False
 
+# person={
+#     "name":"Ruvindu",
+#     "age":25,
+#     "is_student":True
+# }
 
 # print(person)
 # person["address"]="New Address"
@@ -136,6 +141,8 @@ age = 25
 print(name+ str(age))
 #not run time erro
 
+    try:
+        print(name+str(40))
 
 try:
     print("Hello, World!" + str(40))
@@ -143,11 +150,11 @@ except TypeError:
     print("Type Error: Cannot concatenate string and integer.")
 
 
-    # try:
-    #     print(name+str(40))
+    try:
+        print(name+str(40))
 
-    #  except TypeError:
-    #         print("Type Erro tht is "+str(40))
+     except TypeError:
+      print("Type Erro tht is "+str(40))
 
 
 
