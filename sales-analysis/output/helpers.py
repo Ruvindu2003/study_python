@@ -6,3 +6,6 @@ def calculate_pric(quantity, price):
         """Format a number as currency."""
         return f"${value:,.2f}"
         
+
+
+        

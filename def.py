@@ -1,3 +1,6 @@
+ 
+ 
+
 def is_weather(temperature):
     # fixed naming and parameter name
     if temperature > 30:
